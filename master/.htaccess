@@ -1,0 +1,13 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+# If the requested file is not a directory
+RewriteCond %{REQUEST_FILENAME} !-d
+# If the requested file with .php extension does not exist
+RewriteCond %{REQUEST_FILENAME}.php -f
+# Rewrite the URL to append .php
+RewriteRule ^(.*)$ $1.php [L]
+
+#Return 404 if original request is .php
+RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$"
+RewriteRule .* - [L,R=404]

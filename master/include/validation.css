@@ -1,0 +1,29 @@
+form .input-control input[type=text] {
+    
+    color: rgb(20, 20, 20);
+  }
+
+form .input-control {
+    border: none;
+}
+form .input-control input:focus {
+    outline: 0;
+}
+
+form .input-control.success input {
+    border-color: #09c372 !important;
+}
+
+form .input-control.error input {
+    border-color: #ff3860  ;
+}
+
+form .input-control .error {
+    color: #ff3860;
+
+}
+form .input-control.error input:focus {
+    border-color: #ff3860; /* Optionally, you might want to adjust focus state color */
+}
+
+
